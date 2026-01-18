@@ -1,5 +1,5 @@
 # ruby:3.2.1 というベースイメージを取得する
-FROM public.ecr.aws/docker/library/ruby:3.2.1
+FROM public.ecr.aws/docker/library/ruby:3.3.1
 
 # 必要なパッケージ群を取得する
 RUN apt-get update -qq && \
