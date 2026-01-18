@@ -1,13 +1,13 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-3:279586434493:task-definition/web-ramen-task:1",
+    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-3:279586434493:task-definition/ens-handson-task:1",
     "containerDefinitions": [
         {
-            "name": "web-ramen",
-            "image": "279586434493.dkr.ecr.ap-northeast-3.amazonaws.com/web-ramen:latest",
+            "name": "rails-app",
+            "image": "279586434493.dkr.ecr.ap-northeast-3.amazonaws.com/rails-app",
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "web-ramen-3000-tcp",
+                    "name": "rails-app-3000-tcp",
                     "containerPort": 3000,
                     "hostPort": 3000,
                     "protocol": "tcp",
@@ -23,7 +23,7 @@
             "systemControls": []
         }
     ],
-    "family": "web-ramen-task",
+    "family": "ens-handson-task",
     "executionRoleArn": "arn:aws:iam::279586434493:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "revision": 1,
@@ -46,8 +46,8 @@
     "placementConstraints": [],
     "compatibilities": [
         "EC2",
-        "FARGATE",
-        "MANAGED_INSTANCES"
+        "MANAGED_INSTANCES",
+        "FARGATE"
     ],
     "requiresCompatibilities": [
         "EC2",
@@ -59,7 +59,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2026-01-17T03:51:22.630Z",
+    "registeredAt": "2026-01-18T04:02:22.434Z",
     "registeredBy": "arn:aws:iam::279586434493:root",
     "enableFaultInjection": false,
     "tags": []
